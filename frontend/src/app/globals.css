@@ -1,0 +1,79 @@
+/* Import Mapbox CSS */
+@import 'mapbox-gl/dist/mapbox-gl.css';
+
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
+:root {
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  
+  --color-primary: #228be6;
+  --color-primary-hover: #1c7ed6;
+  --color-success: #2ECC71;
+  --color-warning: #F1C40F;
+  --color-danger: #E74C3C;
+  
+  --color-text: #212529;
+  --color-text-light: #f8f9fa;
+  --color-background: #ffffff;
+  --color-background-alt: #f8f9fa;
+  --color-border: #dee2e6;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-family);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/* Dark Theme */
+body.dark {
+  --color-primary: #339af0;
+  --color-primary-hover: #1c7ed6;
+  --color-success: #37b24d;
+  --color-warning: #f59f00;
+  --color-danger: #f03e3e;
+  
+  --color-text: #f8f9fa;
+  --color-text-light: #212529;
+  --color-background: #121212;
+  --color-background-alt: #212529;
+  --color-border: #343a40;
+  
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/* Add some mapbox overrides for better style integration */
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right {
+  z-index: 1000;
+}
+
+.mapboxgl-popup-content {
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Helper classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
